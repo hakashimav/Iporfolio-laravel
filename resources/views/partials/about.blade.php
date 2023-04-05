@@ -3,7 +3,13 @@
 <div class="container">
 
     <div class="section-title">
-    <h2>A propos</h2>
+        <h2>A propos</h2>
+        <p>
+            Développer des applications web ou mobile etc. Intéressants avec du contenu qui
+            dionne envie n'est pas forcément facile quand ce n'est pas notre métier.
+            Heureusement pour vous, c'est le mien.
+            Alors n'hésitez pas à <a href="#contact">me contacter</a>
+        </p>
     </div>
 
     <div class="row">
