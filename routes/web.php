@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [PostController::class, 'index']);
 
-Route::get('/portfolio-details', function () {
-    return view('portfolio-details');
-});
+Route::get('/portfolio-details', [PostController::class, 'portfolio']);
+
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+// Route::get('/portfolio-details', function () {
+//     return view('portfolio-details');
+// });

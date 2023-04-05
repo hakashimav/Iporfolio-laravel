@@ -39,12 +39,12 @@
 
                     <div class="col-lg-4">
                         <div class="portfolio-info">
-                            <h3>Project information</h3>
+                            <h3>{{ $name }}</h3>
                             <ul>
-                                <li><strong>Category </strong>: Web design</li>
-                                <li><strong>Client </strong>: ASU Company</li>
-                                <li><strong>Project date </strong>: 01 March, 2020</li>
-                                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                                <li><strong>Category </strong>: {{ $category }}</li>
+                                <li><strong>Client </strong>: {{ $client}}</li>
+                                <li><strong>Project date </strong>: {{ $pro_date }}</li>
+                                <li><strong>Project URL</strong>: <a href="#">{{ $pro_url}}</a></li>
                             </ul>
                         </div>
 
