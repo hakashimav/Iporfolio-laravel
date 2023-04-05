@@ -20,7 +20,12 @@
 
         <div class="section-title">
           <h2>Les faits</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Une étude menée par le Nielsen Norman group démontre qu'en moyenne, 81 % des internautes lisent
+            le premier paragraphe contre seulement 32 % poue le quatrième
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
         </div>
 
         <div class="row no-gutters">
