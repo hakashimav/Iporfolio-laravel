@@ -2,33 +2,65 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
-    {
-        return view('index');
-    }
 
-    public function portfolio()
+    public function show($id)
     {
+        $post = Post::findOrFail($id);
 
-        $name = 'Project information';
-        $category = 'Web design';
-        $client = 'ASU Company';
-        $pro_date = '01 March, 2020';
-        $pro_url = 'www.example.com';
+        // $post = Post::where('name', 'nom de recherche')->firstOrFail();
 
         return view('portfolio-details',[
-
-            'name' => $name,
-            'category' => $category,
-            'client' => $client,
-            'pro_date' => $pro_date,
-            'pro_url' => $pro_url
-
+            'posts' => $post
         ]);
+    }
+
+    public function index()
+    {
+        // $post = Post::find(1);
+
+        // $post->update([
+        //     'name' => 'indique le update'
+        // ]);
+
+        // $post = Post::find(4);
+        // $post->delete();
+        // dd('sumprimé!');
+
+        $posts = Post::orderBy('name')->get();
+
+        return view('index',[
+            'posts' => $posts
+        ]);
+    }
+
+    public function create()
+    {
+        return view('form');
+    }
+
+    public function save(Request $request)
+    {
+        // $post = new Post();
+
+        // $post->name = $request->name;
+        // $post->category = $request->category;
+        // $post->client = $request->client;
+        // $post->pro_url = $request->url;
+        // $post->save();
+
+        Post::create([
+            'name' => $request->name,
+            'category'=> $request->category,
+            'client' => $request->client,
+            'pro_url' => $request->url
+        ]);
+
+        dd('Post créé !');
     }
 }
 

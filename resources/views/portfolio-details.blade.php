@@ -36,20 +36,18 @@
                         <div class="swiper-pagination"></div>
                         </div>
                     </div>
+                    <h3>{{ $posts->name }}</h3>
+                        <div class="col-lg-4">
+                            <div class="portfolio-info">
 
-                    <div class="col-lg-4">
-                        <div class="portfolio-info">
-                            <h3>{{ $name }}</h3>
-                            <ul>
-                                <li><strong>Category </strong>: {{ $category }}</li>
-                                <li><strong>Client </strong>: {{ $client}}</li>
-                                <li><strong>Project date </strong>: {{ $pro_date }}</li>
-                                <li><strong>Project URL</strong>: <a href="#">{{ $pro_url}}</a></li>
-                            </ul>
+                                <ul>
+                                    <li><strong>Category </strong>: </li>
+                                    <li><strong>Client </strong>: </li>
+                                    <li><strong>Project date </strong>: </li>
+                                    <li><strong>Project URL</strong>: <a href="#"></a></li>
+                                </ul>
+                            </div>
                         </div>
-
-                    </div>
-
                 </div>
 
             </div>

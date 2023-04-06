@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PostController::class, 'index']);
 
-Route::get('/portfolio-details', [PostController::class, 'portfolio']);
+Route::get('/', [PostController::class, 'index']);
+Route::get('/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/create', [PostController::class, 'save'])->name('posts.save');
+Route::get('/portfolio-details/{id}', [PostController::class, 'show'])->name('posts.show');
+
+
+// Route::get('/portfolio-details', [PostController::class, 'portfolio']);
 
 // Route::get('/', function () {
 //     return view('index');
