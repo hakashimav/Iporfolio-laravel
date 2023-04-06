@@ -12,8 +12,8 @@
                     <h2>Portfolio Details</h2>
                     <ol>
                         <li><a href="/">Home</a></li>
-                        <li>Portfolio Details</li>
-                    </ol>
+                    <li>Portfolio Details</li>
+                </ol>
                 </div>
 
             </div>
@@ -36,7 +36,7 @@
                         <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <h3>{{ $posts->name }}</h3>
+                    {{-- <h3>{{ $posts->name }}</h3> --}}
                         <div class="col-lg-4">
                             <div class="portfolio-info">
 
