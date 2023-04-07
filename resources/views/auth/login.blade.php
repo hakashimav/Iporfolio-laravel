@@ -5,7 +5,7 @@
 <x-guest-layout>
     <x-auth-card>
 
-            <section id="contact" class="contact">
+            <section class="contact">
                 <div class="container">
                     <nav id="navbar" class="nav-menu navbar">
                         <ul>
@@ -18,7 +18,7 @@
                     <!-- Validation Errors -->
                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
                     <div class="row" data-aos="fade-left">
-                        <form method="POST" action="{{ route('login') }}" role="form" class="php-email-form">
+                        <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <!-- Email Address -->
@@ -50,7 +50,7 @@
                                     </a>
                                 @endif
 
-                                <x-button class="ml-3 text-center" type="submit"> {{ __('Log in') }}</x-button>
+                                <x-button class="ml-3 text-center text-center bg-success"> {{ __('Log in') }}</x-button>
                             </div>
                         </form>
                     </div>
