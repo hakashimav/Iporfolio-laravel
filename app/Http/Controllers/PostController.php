@@ -40,7 +40,7 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('form');
+        return view('dashboard');
     }
 
     public function save(Request $request)
