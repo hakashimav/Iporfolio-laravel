@@ -13,7 +13,7 @@
             <div class="row" data-aos="fade-left">
 
                 <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form action="#" method="post" role="form" class="php-email-form">
+                    <form method="post" action="{{ route('posts.stores') }}" >
                     @csrf
                     <div class="row">
                         <div class="form-group col-md-6">
@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group col-md-6">
                         <label for="name">Catégorie</label>
-                        <input type="email" class="form-control" name="category" id="email" required>
+                        <input type="text" class="form-control" name="category" id="email" required>
                         </div>
                     </div>
                     <div class="form-group">

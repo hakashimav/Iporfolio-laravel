@@ -12,6 +12,7 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/dashboard', [PostController::class, 'store'])->name('posts.stores');
 
 Route::get('/', [PostController::class, 'index'])->name('welcome');
 Route::get('/portfolio-details/{id}',[PostController::class, 'show'])->name('posts.show');

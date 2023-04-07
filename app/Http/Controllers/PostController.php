@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Post;
+use Illuminate\Http\Client\Events\RequestSending;
+use Illuminate\Http\Client\Request as ClientRequest;
 use illuminate\Http\Request;
+
 
 class PostController extends Controller
 {
@@ -43,9 +47,15 @@ class PostController extends Controller
         return view('dashboard');
     }
 
-    public function save(Request $request)
+    public function store(Request $request)
     {
-        // $post = new Post();
+        // $request->validate([
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'category' => ['required', 'string', 'max:255'],
+        //     'client' => ['required', 'string', 'max:255'],
+        //     'url' => ['required', 'string', 'max:255'],
+
+        // ]);
 
         // $post->name = $request->name;
         // $post->category = $request->category;
@@ -53,15 +63,15 @@ class PostController extends Controller
         // $post->pro_url = $request->url;
         // $post->save();
 
-        Post::create([
-            'name' => $request->name,
-            'category'=> $request->category,
-            'client' => $request->client,
-            'pro_url' => $request->url
-        ]);
-
-        dd('Post créé !');
+        // $post = Post::create([
+        //     'name' => $requests->name,
+        //     'category'=> $requests->category,
+        //     'client' => $requests->client,
+        //     'pro_url' => $requests->url
+        // ]);
+        dd($request);
     }
+
 }
 
 
