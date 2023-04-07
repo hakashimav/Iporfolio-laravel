@@ -15,7 +15,7 @@ class PostController extends Controller
         // $post = Post::where('name', 'nom de recherche')->firstOrFail();
 
         return view('portfolio-details',[
-            'posts' => $post
+            'post' => $post
         ]);
     }
 

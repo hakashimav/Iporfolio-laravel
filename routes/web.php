@@ -14,7 +14,7 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', [PostController::class, 'index'])->name('welcome');
-Route::get('/portfolio-details',[PostController::class, 'show']);
+Route::get('/portfolio-details/{id}',[PostController::class, 'show'])->name('posts.show');
 Route::get('/dashboard', [PostController::class, 'create'])->middleware(['auth'])->name('dashboard');
 
 

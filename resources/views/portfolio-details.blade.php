@@ -36,7 +36,7 @@
                         <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    {{-- <h3>{{ $posts->name }}</h3> --}}
+                    <h3>{{ $post->name }}</h3>
                         <div class="col-lg-4">
                             <div class="portfolio-info">
 
@@ -54,5 +54,4 @@
         </section><!-- End Portfolio Details Section -->
 
     </main><!-- End #main -->
-
 @endsection
