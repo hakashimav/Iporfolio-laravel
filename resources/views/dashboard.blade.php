@@ -13,7 +13,7 @@
             <div class="row" data-aos="fade-left">
 
                 <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form action="{{ route('posts.save') }}" method="post" role="form" class="php-email-form">
+                    <form action="#" method="post" role="form" class="php-email-form">
                     @csrf
                     <div class="row">
                         <div class="form-group col-md-6">
