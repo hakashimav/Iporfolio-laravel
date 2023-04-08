@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Providers\RouteServiceProvider;
 use App\Models\Post;
-use Illuminate\Http\Client\Events\RequestSending;
-use Illuminate\Http\Client\Request as ClientRequest;
 use illuminate\Http\Request;
-
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class PostController extends Controller
 {
@@ -40,36 +39,6 @@ class PostController extends Controller
         return view('index',[
             'posts' => $posts
         ]);
-    }
-
-    public function create()
-    {
-        return view('dashboard');
-    }
-
-    public function store(Request $request)
-    {
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'category' => ['required', 'string', 'max:255'],
-        //     'client' => ['required', 'string', 'max:255'],
-        //     'url' => ['required', 'string', 'max:255'],
-
-        // ]);
-
-        // $post->name = $request->name;
-        // $post->category = $request->category;
-        // $post->client = $request->client;
-        // $post->pro_url = $request->url;
-        // $post->save();
-
-        // $post = Post::create([
-        //     'name' => $requests->name,
-        //     'category'=> $requests->category,
-        //     'client' => $requests->client,
-        //     'pro_url' => $requests->url
-        // ]);
-        dd($request);
     }
 
 }

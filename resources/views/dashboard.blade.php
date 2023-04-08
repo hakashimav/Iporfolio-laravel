@@ -13,8 +13,7 @@
             <div class="row" data-aos="fade-left">
 
                 <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form method="post" action="{{ route('posts.stores') }}" >
-                    @csrf
+                    <form methode="post" action="{{ route('succes')}}">
                     <div class="row">
                         <div class="form-group col-md-6">
                         <label for="name">Type Projet</label>
@@ -31,7 +30,7 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Adresse Url</label>
-                        <input type="text" class="form-control" name="url" id="subject" required>
+                        <input type="text" class="form-control" name="pro_url" id="subject" required>
                     </div>
                     <div class="my-3">
                         <div class="loading">Chargement</div>

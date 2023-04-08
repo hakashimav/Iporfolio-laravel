@@ -68,18 +68,6 @@
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i><span>Portfolio</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i><span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i><span>Contact</span></a></li>
-            @if (Route::has('login'))
-                @auth
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <li><x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();"><i class="bx bx-log-out"></i><span> {{ __('Log Out') }}</span></x-dropdown-link></li>
-                </form>
-                @else
-                    <li><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><i class="bx bx-log-in"></i><span>Log in</span></a></li>
-                @endauth
-
-             @endif
         </ul>
       </nav><!-- .nav-menu -->
     </div>

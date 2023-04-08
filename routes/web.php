@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Requests\Postquest;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,12 +13,11 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/dashboard', [PostController::class, 'store'])->name('posts.stores');
 
 Route::get('/', [PostController::class, 'index'])->name('welcome');
 Route::get('/portfolio-details/{id}',[PostController::class, 'show'])->name('posts.show');
 Route::get('/dashboard', [PostController::class, 'create'])->middleware(['auth'])->name('dashboard');
-
+Route::POST('/succes', [PostController::class, 'store']);
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
